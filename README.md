@@ -161,4 +161,6 @@ NestDrive is meant for a **trusted home network**. Do not expose it to the inter
 
 ## License
 
-Released under the [MIT License](LICENSE). © 2026 harshyad24
+NestDrive is released under the [GNU General Public License v3.0](LICENSE). © 2026 harshyad24
+
+The NestDrive name and logo are not covered by this license and may not be used for modified versions without permission.
