@@ -1,0 +1,190 @@
+:root {
+  --bg: #F3EDDF;
+  --card: #FFFCF5;
+  --ink: #29364B;
+  --muted: #596579;
+  --line: #D9C7A5;
+  --blue: #4361A8;
+  --pale: #E5EAF5;
+  --theme-emoji-bg: #D9C7A5;
+  --focus-ring: rgba(67, 97, 168, 0.25);
+  color-scheme: light;
+}
+
+body.theme-light {
+  --bg: #F3EDDF; --card: #FFFCF5; --ink: #29364B;
+  --muted: #596579; --line: #D9C7A5; --blue: #4361A8;
+  --pale: #E5EAF5; --theme-emoji-bg: #D9C7A5;
+  color-scheme: light;
+}
+
+body.theme-warm-coral {
+  --bg: #F8D8D0; --card: #FFF1EC; --ink: #512C2A;
+  --muted: #512C2A; --line: #D85D3D; --blue: #D85D3D;
+  --pale: #F8D8D0; --theme-emoji-bg: #D85D3D;
+  color-scheme: light;
+}
+
+body.theme-sky-high {
+  --bg: #DCEBFA; --card: #F5FAFF; --ink: #173653;
+  --muted: #173653; --line: #367EBB; --blue: #367EBB;
+  --pale: #DCEBFA; --theme-emoji-bg: #367EBB;
+  color-scheme: light;
+}
+
+body.theme-sunlit-gold {
+  --bg: #FFF0BF; --card: #FFFAE8; --ink: #553A1F;
+  --muted: #553A1F; --line: #9D6228; --blue: #9D6228;
+  --pale: #FFF0BF; --theme-emoji-bg: #9D6228;
+  color-scheme: light;
+}
+
+body.theme-earthy-tones {
+  --bg: #E8D5B5; --card: #F8F0E3; --ink: #3F3028;
+  --muted: #3F3028; --line: #96563E; --blue: #96563E;
+  --pale: #E8D5B5; --theme-emoji-bg: #96563E;
+  color-scheme: light;
+}
+
+body.theme-twilight-blues {
+  --bg: #252B55; --card: #303965; --ink: #F4F2FF;
+  --muted: #F4F2FF; --line: #A5A5D7; --blue: #A5A5D7;
+  --pale: #252B55; --theme-emoji-bg: #A5A5D7;
+  color-scheme: dark;
+}
+
+body.theme-vibrant-fern {
+  --bg: #D9EAC4; --card: #F5FAED; --ink: #213D25;
+  --muted: #213D25; --line: #28572E; --blue: #28572E;
+  --pale: #D9EAC4; --theme-emoji-bg: #28572E;
+  color-scheme: light;
+}
+
+body.theme-emerald-green {
+  --bg: #075447; --card: #0D6857; --ink: #F0FFF9;
+  --muted: #F0FFF9; --line: #71D9B6; --blue: #71D9B6;
+  --pale: #075447; --theme-emoji-bg: #71D9B6;
+  color-scheme: dark;
+}
+
+body.theme-celestial-night {
+  --bg: #030811; --card: #071426; --ink: #F2F6FF;
+  --muted: #F2F6FF; --line: #8CAED6; --blue: #8CAED6;
+  --pale: #030811; --theme-emoji-bg: #8CAED6;
+  color-scheme: dark;
+}
+
+body.theme-premium-black {
+  --bg: #050505; --card: #111111; --ink: #F5F5F5;
+  --muted: #C2C2C2; --line: #444444; --blue: #E0E0E0;
+  --pale: #222222; --theme-emoji-bg: #303030;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.top, aside, .cat, .file, .preview-panel {
+  background: var(--card);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.nav { color: var(--ink); }
+
+.nav:hover, .nav.active {
+  background: var(--pale);
+  color: var(--ink);
+}
+
+input, select, textarea, .pill,
+.actions button, .actions a, .preview-close {
+  background: var(--card);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.muted, .sub, .meta, .empty {
+  color: var(--muted);
+}
+
+.theme-picker {
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+}
+
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 64px;
+  gap: 10px;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  height: 64px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.theme-option:hover {
+  border-color: var(--blue);
+  transform: translateY(-1px);
+}
+
+.theme-emoji {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 10px;
+  background: var(--theme-emoji-bg);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.theme-option[aria-pressed="true"] {
+  border: 2px solid var(--blue);
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+.theme-option:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 360px) {
+  .theme-picker { padding: 8px; }
+  .theme-options { gap: 7px; grid-auto-rows: 56px; }
+  .theme-option { height: 56px; }
+  .theme-emoji {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

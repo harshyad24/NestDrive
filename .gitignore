@@ -1,0 +1,7 @@
+data/
+storage/
+.nestdrive_secret
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
