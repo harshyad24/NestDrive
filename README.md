@@ -1,9 +1,7 @@
 # NestDrive
+turn an Android phone (through Termux), a Mac or a Windows PC into a small private cloud drive on your local network. You open it in any web browser to upload, organise, preview and download your files. Nothing leaves your network, and there is no outside account or subscription.
 
 https://github.com/user-attachments/assets/b6334831-9208-4fc1-938b-f176107a4ab1
-
-NestDrive turns an Android phone (through Termux), a Mac or a Windows PC into a small private cloud drive on your local network. You open it in any web browser to upload, organise, preview and download your files. Nothing leaves your network, and there is no outside account or subscription.
-
 ## Features
 
 - Accounts with hashed passwords; each user only sees their own files
